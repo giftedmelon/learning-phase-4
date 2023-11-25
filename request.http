@@ -5,7 +5,7 @@ Content-Type: application/json
 
 ###
 
-Get {{{baseUrl}}}/pets?name=NIAO HTTP/1.1
+Get {{baseUrl}}/pets?name=GIGI HTTP/1.1
 Content-Type: application/json
 
 ###
@@ -69,3 +69,34 @@ Content-Type: application/json
     "petId": 4
   }
 }
+
+### signup
+POST {{baseUrl}}/signup HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "lyx1231996@gmail.com",
+  "password": "!1741096043x"
+}
+
+### signin
+
+POST {{baseUrl}}/signin HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "lyx1231996@gmail.com",
+  "password": "!1741096043x"
+}
+
+### upload image
+
+POST {{baseUrl}}/images HTTP/1.1
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file"; filename="pikachu.jpeg"
+Content-Type: image/jpeg
+
+< images/pikachu.jpeg
+--MyBoundary--
